@@ -1,1 +1,124 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  background-color: #6f81a1;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.select-wrapper {
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 60px;
+  background: linear-gradient(to right, red, purple);
+  border-radius: 3px;
+}
+
+select {
+  width: 250px;
+  height: 50px;
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  background-color: rgb(213, 153, 153);
+  cursor: pointer;
+}
+
+select > option {
+  font-size: 16px;
+}
+
+.cat-info {
+  width: 1200px;
+  max-height: 600px;
+  display: flex;
+  margin: 0 auto;
+  background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 70, 1) 100%);
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.cat-thumb, 
+.cat-description {
+  display: inline-block;
+}
+
+.cat-description {
+  padding: 10px 25px;
+  text-align: center;
+  width: 700px;
+  height: 100%;
+  order: 1;
+}
+
+.cat-thumb {
+  order: 2;
+}
+
+.cat-img {
+  display: block;
+}
+
+.cat-desc,
+.cat-name, 
+.cat-temp {
+  display: inline-block;
+  font-family: 'Trebuchet MS';
+}
+
+.cat-desc,
+.cat-temp {
+  text-shadow: -6px 6px 18px rgba(0, 0, 0, 0.35);
+  font-size: 20px;
+}
+
+.cat-name {
+  font-size: 36px;
+  text-shadow: -7px 8px 5px rgba(0, 0, 0, 0.53);
+}
+
+.cat-desc {
+  text-align: left;
+}
+
+.loader {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block;
+  left: calc(50% - 8px);
+  position: absolute;
+  background: #FFF;
+  box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+  box-sizing: border-box;
+  animation: shadowPulse 2s linear infinite;
+}
+
+@keyframes shadowPulse {
+  33% {
+    background: #FFF;
+    box-shadow: -24px 0 #FF3D00, 24px 0 #FFF;
+  }
+
+  66% {
+    background: #FF3D00;
+    box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+  }
+
+  100% {
+    background: #FFF;
+    box-shadow: -24px 0 #FFF, 24px 0 #FF3D00;
+  }
+}
